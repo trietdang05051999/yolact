@@ -1,4 +1,5 @@
 from data import *
+from data.cityscapes import Cityscapes
 from utils.augmentations import SSDAugmentation, BaseTransform
 from utils.functions import MovingAverage, SavePath
 from utils.logger import Log
@@ -173,15 +174,18 @@ def train():
     if not os.path.exists(args.save_folder):
         os.mkdir(args.save_folder)
 
-    dataset = COCODetection(image_path=cfg.dataset.train_images,
-                            info_file=cfg.dataset.train_info,
-                            transform=SSDAugmentation(MEANS))
-    
+    # dataset =  COCODetection(image_path=cfg.dataset.train_images,
+    #                         info_file=cfg.dataset.train_info,
+    #                         transform=SSDAugmentation(MEANS))
+    dataset = Cityscapes('./data/cityscapes', split='train', mode='fine',
+                                 target_type=['instance', 'color', 'polygon'])
     if args.validation_epoch > 0:
         setup_eval()
-        val_dataset = COCODetection(image_path=cfg.dataset.valid_images,
-                                    info_file=cfg.dataset.valid_info,
-                                    transform=BaseTransform(MEANS))
+        # val_dataset = COCODetection(image_path=cfg.dataset.valid_images,
+        #                             info_file=cfg.dataset.valid_info,
+        #                             transform=BaseTransform(MEANS))
+        dataset = Cityscapes('./data/cityscapes', split='train', mode='fine',
+                                 target_type=['instance', 'color', 'polygon'])
 
     # Parallel wraps the underlying module, but when saving and loading we don't want that
     yolact_net = Yolact()
