@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1323900,
+        "project_id": 96398,
+        "name": "Background",
+        "color": "#916041",
+        "type": "object",
+        "createdAt": "2022-08-24T06:27:48.000Z",
+        "updatedAt": "2022-08-24T06:27:48.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323899,
+        "project_id": 96398,
+        "name": "Ground",
+        "color": "#e2d5de",
+        "type": "object",
+        "createdAt": "2022-08-24T06:27:36.000Z",
+        "updatedAt": "2022-08-24T06:27:36.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323898,
+        "project_id": 96398,
+        "name": "Bowler",
+        "color": "#0018fd",
+        "type": "object",
+        "createdAt": "2022-08-24T06:26:50.000Z",
+        "updatedAt": "2022-08-24T06:26:50.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323897,
+        "project_id": 96398,
+        "name": "Batsmen",
+        "color": "#b07a53",
+        "type": "object",
+        "createdAt": "2022-08-24T06:26:44.000Z",
+        "updatedAt": "2022-08-24T06:26:44.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323896,
+        "project_id": 96398,
+        "name": "Wicket Keeper",
+        "color": "#8fdfa9",
+        "type": "object",
+        "createdAt": "2022-08-24T06:26:37.000Z",
+        "updatedAt": "2022-08-24T06:26:37.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323895,
+        "project_id": 96398,
+        "name": "Umpire",
+        "color": "#e20959",
+        "type": "object",
+        "createdAt": "2022-08-24T06:26:30.000Z",
+        "updatedAt": "2022-08-24T06:26:30.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323894,
+        "project_id": 96398,
+        "name": "Fielder",
+        "color": "#c2fe6b",
+        "type": "object",
+        "createdAt": "2022-08-24T06:26:25.000Z",
+        "updatedAt": "2022-08-24T06:26:25.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323893,
+        "project_id": 96398,
+        "name": "Ball",
+        "color": "#5e8d38",
+        "type": "object",
+        "createdAt": "2022-08-24T06:26:19.000Z",
+        "updatedAt": "2022-08-24T06:26:19.000Z",
+        "attribute_groups": []
+    },
+    {
+        "id": 1323892,
+        "project_id": 96398,
+        "name": "Wicket",
+        "color": "#1e472a",
+        "type": "object",
+        "createdAt": "2022-08-24T06:26:12.000Z",
+        "updatedAt": "2022-08-24T06:26:12.000Z",
+        "attribute_groups": []
+    }
+]
