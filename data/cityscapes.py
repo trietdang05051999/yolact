@@ -6,7 +6,8 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 from PIL import Image
 
 from utils import extract_archive, iterable_to_str, verify_str_arg
-from vision import VisionDataset
+from torchvision.datasets.vision import VisionDataset
+
 
 
 class Cityscapes(VisionDataset):
@@ -171,7 +172,7 @@ class Cityscapes(VisionDataset):
                 self.images.append(os.path.join(img_dir, file_name))
                 self.targets.append(target_types)
 
-def __getitem__(self, index: int) -> Tuple[Any, Any]:
+    def __getitem__(self, index: int) -> Tuple[Any, Any]:
         """
         Args:
             index (int): Index
@@ -198,19 +199,19 @@ def __getitem__(self, index: int) -> Tuple[Any, Any]:
 
         return image, target
 
-def __len__(self) -> int:
+    def __len__(self) -> int:
         return len(self.images)
 
-def extra_repr(self) -> str:
+    def extra_repr(self) -> str:
         lines = ["Split: {split}", "Mode: {mode}", "Type: {target_type}"]
         return "\n".join(lines).format(**self.__dict__)
 
-def _load_json(self, path: str) -> Dict[str, Any]:
+    def _load_json(self, path: str) -> Dict[str, Any]:
         with open(path) as file:
             data = json.load(file)
         return data
 
-def _get_target_suffix(self, mode: str, target_type: str) -> str:
+    def _get_target_suffix(self, mode: str, target_type: str) -> str:
         if target_type == "instance":
             return f"{mode}_instanceIds.png"
         elif target_type == "semantic":
